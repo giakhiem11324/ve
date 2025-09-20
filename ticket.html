@@ -2,55 +2,113 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Ticket của bạn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Halloween Ticket</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      height: 100vh;
+      min-height: 100vh;
+      background: url("img/391d5c44-a8ba-4aff-b141-604bf1c2e0d7.jpg") no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-      color: white;
-      text-align: center;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      animation: fadeIn 1s ease-in;
     }
-    /* Ảnh nền */
-    .bg-img {
-      position: fixed;
-      top: 0;
-      left: 0;
+
+    .outer-box {
+      padding: 12px;
+      border-radius: 16px;
+      border: 3px solid #39ff14;
+      box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14;
+      animation: neonGlow 2s infinite alternate, slideUp 1s ease-out;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
+      max-width: 400px;
     }
-    /* Khung ticket */
-    .ticket {
-      background: rgba(0, 0, 0, 0.7);
-      border: 2px dashed #00ff99;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 0 20px rgba(0,255,150,0.6);
+
+    .ticket-box {
+      background: rgba(0, 0, 0, 0.85);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      border: 2px dashed #a020f0;
+      box-shadow: 0 0 15px #a020f0, 0 0 30px #a020f0;
+      animation: purpleGlow 3s infinite alternate;
     }
-    .ticket img {
-      max-width: 300px;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.4);
+
+    h1 {
+      font-size: 1.4rem;
+      color: #39ff14;
+      margin-bottom: 15px;
+      text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+      animation: greenFlicker 2s infinite;
+    }
+
+    .line-purple {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #a020f0;
+      margin: 10px 0;
+      text-shadow: 0 0 5px #a020f0, 0 0 15px #a020f0;
+    }
+
+    .line-green {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #39ff14;
+      margin: 10px 0;
+      text-shadow: 0 0 5px #39ff14, 0 0 15px #39ff14;
+    }
+
+    .ticket-img {
+      margin-top: 15px;
+    }
+
+    .ticket-img img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #39ff14;
+    }
+
+    /* Hiệu ứng phát sáng */
+    @keyframes neonGlow {
+      from { box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; }
+      to   { box-shadow: 0 0 30px #39ff14, 0 0 60px #39ff14; }
+    }
+
+    @keyframes purpleGlow {
+      from { box-shadow: 0 0 10px #a020f0, 0 0 20px #a020f0; }
+      to   { box-shadow: 0 0 30px #a020f0, 0 0 60px #a020f0; }
+    }
+
+    @keyframes greenFlicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+      20%, 24%, 55% { opacity: 0.4; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <!-- Ảnh nền -->
-  <img src="img/391d5c44-a8ba-4aff-b141-604bf1c2e0d7.jpg" alt="Background" class="bg-img">
-
-  <div class="ticket">
-    <h1>🎫 🎃Happy Halloween🎃</h1>
-    <h2>Chúc mừng, bạn đã mở khóa ticket thành công!</h2>
-    <p>Mật khẩu nhập đúng ✅</p>
-    <img src="img/ticket.jpg" alt="Hình ảnh Ticket">
+  <div class="outer-box">
+    <div class="ticket-box">
+      <h1>🎃 Halloween Ticket 🎃</h1>
+      <p class="line-purple">CONGRATS! GET READY FOR KIDDY NIGHT: SPOOKY BEATS!</p>
+      <p class="line-green"> YOUR TICKET IS UNLOCKED </p>
+      <div class="ticket-img">
+        <img src="img/ticket.jpg" alt="Halloween Ticket">
+      </div>
+    </div>
   </div>
 </body>
 </html>
