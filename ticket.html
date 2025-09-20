@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Ticket của bạn</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+    }
+    /* Ảnh nền */
+    .bg-img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    /* Khung ticket */
+    .ticket {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px dashed #00ff99;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(0,255,150,0.6);
+    }
+    .ticket img {
+      max-width: 300px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+<body>
+  <!-- Ảnh nền -->
+  <img src="img/391d5c44-a8ba-4aff-b141-604bf1c2e0d7.jpg" alt="Background" class="bg-img">
+
+  <div class="ticket">
+    <h1>🎫 Vé của bạn</h1>
+    <h2>Chúc mừng, bạn đã mở khóa ticket thành công!</h2>
+    <p>Mật khẩu nhập đúng ✅</p>
+    <img src="img/ticket.jpg" alt="Hình ảnh Ticket">
+  </div>
+</body>
+</html>

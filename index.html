@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập để xem Ticket</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    /* Ảnh nền */
+    .bg-img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    /* Form box */
+    .form-box {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      color: white;
+      text-align: center;
+    }
+    input[type="password"] {
+      padding: 10px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      background: #00cc66;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00994d;
+    }
+  </style>
+</head>
+<body>
+  <!-- Ảnh nền -->
+  <img src="img/391d5c44-a8ba-4aff-b141-604bf1c2e0d7.jpg" alt="Background" class="bg-img">
+
+  <!-- Form nhập mật khẩu -->
+  <div class="form-box">
+    <h2>Nhập mật khẩu để xem Ticket</h2>
+    <input type="password" id="password" placeholder="Nhập mật khẩu"> 
+    <br>
+    <button onclick="checkPassword()">Xác nhận</button>
+  </div>
+
+  <script>
+    const password = "301025"; // mật khẩu cố định
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === password) {
+        window.location.href = "ticket.html"; // chuyển sang trang ticket
+      } else {
+        alert("Sai mật khẩu, vui lòng thử lại!");
+      }
+    }
+  </script>
+</body>
+</html>
